@@ -95,13 +95,26 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import
+{ defineComponent } from
 
-export default defineComponent({
+
+'vue'
+
+export
+ default defineComponent
+({
   name: 'HelloWorld',
   props: {
+
+
+
     msg: String
   }
+
+
+
+  
 })
 </script>
 

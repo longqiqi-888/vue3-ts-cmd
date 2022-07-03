@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>{{ name }}</h2>
     <router-link to="/main">首页/</router-link>
     <router-link to="/login">登录</router-link>
     <router-view></router-view>
@@ -8,19 +9,19 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useStore } from 'vuex'
 
 export default defineComponent({
-  name: 'App'
+  name: 'App',
+  setup() {
+    const store = useStore()
+    const name = store.state.name
+
+    return {
+      name
+    }
+  }
 })
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="less"></style>

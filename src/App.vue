@@ -11,9 +11,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useStore } from 'vuex'
+import { ElButton } from 'element-plus'
 
 export default defineComponent({
   name: 'App',
+  components: {
+    ElButton
+  },
   setup() {
     const store = useStore()
     const name = store.state.name

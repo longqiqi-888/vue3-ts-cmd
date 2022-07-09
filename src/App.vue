@@ -5,19 +5,16 @@
     <router-link to="/login">登录</router-link>
     <router-view></router-view>
     <el-button>按钮</el-button>
+    <el-input></el-input>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useStore } from 'vuex'
-import { ElButton } from 'element-plus'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    ElButton
-  },
   setup() {
     const store = useStore()
     const name = store.state.name

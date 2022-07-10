@@ -6,6 +6,8 @@
 
 module.exports = {
   outputDir: './build',
+  // 修改加载资源对应的路径-部署到服务器注释掉
+  publicPath: './',
   configureWebpack: {
     resolve: {
       alias: {
